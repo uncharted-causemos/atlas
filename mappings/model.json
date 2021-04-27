@@ -1,0 +1,68 @@
+{
+    "dynamic": "strict",
+    "properties":{
+        "id": {
+            "type": "keyword"
+        },
+        "project_id": {
+            "type": "keyword"
+        },
+        "name": {
+            "type": "keyword"
+        },
+        "description": {
+            "type": "text"
+        },
+        "thumbnail_source": {
+            "enabled": "false"
+        },
+        "is_stale": {
+          "type": "boolean"
+        },
+        "is_synced": {
+            "type": "boolean"
+        },
+        "is_quantified": {
+          "type": "boolean"
+        },
+        "is_ambiguous": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "integer"
+        },
+        "created_at": {
+            "type": "date"
+        },
+        "modified_at": {
+            "type": "date",
+            "format": "epoch_millis"
+        },
+        "parameter": {
+            "properties": {
+                "engine": {
+                    "type": "keyword"
+                },
+                "num_steps": {
+                    "type": "integer"
+                },
+                "projection_start": {
+                    "type": "date",
+                    "format": "epoch_millis"
+                },
+                "indicator_time_series_range": {
+                    "properties": {
+                        "start": {
+                            "type": "date",
+                            "format": "epoch_millis"
+                        },
+                        "end": {
+                            "type": "date",
+                            "format": "epoch_millis"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

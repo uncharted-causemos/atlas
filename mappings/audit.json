@@ -1,0 +1,56 @@
+{
+    "dynamic": "strict",
+    "properties": {
+        "batch_id": {
+            "type": "keyword"
+        },
+        "project_id": {
+            "type": "keyword"
+        },
+        "statement_id": {
+            "type": "keyword"
+        },
+        "update_type": {
+            "type": "keyword"
+        },
+        "updated_by": {
+            "type": "keyword"
+        },
+        "modified_at": {
+            "type": "date",
+            "format": "epoch_millis"
+        },
+        "before": {
+            "properties": {
+                "subj": {
+                    "properties": {},
+                    "dynamic": "true"
+                },
+                "obj": {
+                    "properties": {},
+                    "dynamic": "true"
+                },
+                "wm": {
+                    "properties": {},
+                    "dynamic": "true"
+                }
+            }
+        },
+        "after": {
+            "properties": {
+                "subj": {
+                    "properties": {},
+                    "dynamic": "true"
+                },
+                "obj": {
+                    "properties": {},
+                    "dynamic": "true"
+                },
+                "wm": {
+                    "properties": {},
+                    "dynamic": "true"
+                }
+            }
+        }
+    }
+}

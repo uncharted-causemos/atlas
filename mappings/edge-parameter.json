@@ -1,0 +1,43 @@
+{
+    "dynamic": "strict",
+    "properties": {
+        "id": {
+            "type": "keyword"
+        },
+        "model_id": {
+            "type": "keyword"
+        },
+        "state": {
+            "type": "boolean"
+        },
+        "root_source": {
+            "type": "keyword"
+        },
+        "root_target": {
+            "type": "keyword"
+        },
+        "reference_ids": {
+            "type": "keyword"
+        },
+        "source": {
+            "type": "keyword"
+        },
+        "target": {
+            "type": "keyword"
+        },
+        "user_polarity": {
+            "type": "integer"
+        },
+        "parameter": {
+            "properties": {
+                "weight": {
+                    "type": "float"
+                }
+            }
+        },
+        "modified_at": {
+            "type": "date",
+            "format": "epoch_millis"
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "dynamic": "strict",
+    "properties": {
+        "description": {
+            "type": "text"
+        },
+        "engine": {
+            "type": "keyword"
+        },
+        "experiment_id": {
+            "type": "keyword"
+        },
+        "id": {
+            "type": "keyword"
+        },
+        "is_baseline": {
+            "type": "boolean"
+        },
+        "is_valid": {
+            "type": "boolean"
+        },
+        "model_id": {
+            "type": "keyword"
+        },
+        "modified_at": {
+            "format": "epoch_millis",
+            "type": "date"
+        },
+        "name": {
+            "type": "keyword"
+        },
+        "parameter": {
+            "dynamic": "true",
+            "properties": {}
+        },
+        "result": {
+            "dynamic": "true",
+            "properties": {}
+        }
+    }
+}

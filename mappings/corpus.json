@@ -1,0 +1,75 @@
+{
+    "dynamic": "strict",
+    "properties": {
+        "analysis": {
+            "properties": {
+                "sentiment": {
+                    "type": "keyword"
+                },
+                "sentiment_score": {
+                    "type": "double"
+                },
+                "stance": {
+                    "type": "keyword"
+                },
+                "subjectivity": {
+                    "type": "keyword"
+                },
+                "subjectivity_score": {
+                    "type": "double"
+                }
+            }
+        },
+        "author": {
+            "type": "keyword"
+        },
+        "collection_type": {
+            "type": "keyword"
+        },
+        "id": {
+            "type": "keyword"
+        },
+        "doc_title": {
+            "type": "keyword"
+        },
+        "extracted_text": {
+            "type": "text"
+        },
+        "file_name": {
+            "type": "keyword"
+        },
+        "file_type": {
+            "type": "keyword"
+        },
+        "ner_analytics": {
+            "properties": {
+                "loc": {
+                    "type": "keyword"
+                },
+                "org": {
+                    "type": "keyword"
+                }
+            }
+        },
+        "publication_date": {
+            "properties": {
+                "date": {
+                    "format": "epoch_millis",
+                    "type": "date"
+                },
+                "day": {
+                    "type": "double"
+                },
+                "month": {
+                    "type": "double"
+                },
+                "year": {
+                    "type": "double"
+                }
+            }
+        },
+        "publisher_name": {
+            "type": "keyword"
+        }
+    }
+}
