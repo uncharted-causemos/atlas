@@ -23,6 +23,9 @@ def scan_directory(directory):
 
 
 def create_index(client, index_name, index_mappings):
+    """
+    Create index, returns status 400 if already exist
+    """
     settings = {
         "index.number_of_shards": 1,
         "index.number_of_replicas": 0
@@ -40,11 +43,14 @@ def create_index(client, index_name, index_mappings):
         logger.info(f"\t{response}")
         
 
-
 if __name__ == "__main__":
-    host = "http://localhost"
-    port = 9200
+    host = os.environ.get("HOST")
+    port = os.environ.get("PORT")
     mappings = scan_directory("./mappings")
+
+    if host == None or port == None:
+        logger.error("ES host or port not specified")
+        exit(-1)
 
     client = Elasticsearch(host, port=port)
 
@@ -56,5 +62,3 @@ if __name__ == "__main__":
             content = F.read()
             content = json.loads(content)
             create_index(client, index_name, content)
-            
-

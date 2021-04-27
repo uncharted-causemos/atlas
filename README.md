@@ -4,5 +4,5 @@ atlas provides schemas and mappings for World Modelers
 
 #### Run 
 ```
-python es_mapper.py
+PORT=<port> HOST=<host> python es_mapper.py
 ```
