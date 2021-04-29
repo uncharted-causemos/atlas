@@ -30,7 +30,7 @@
         },
         "parameter": {
             "properties": {
-                "weight": {
+                "weights": {
                     "type": "float"
                 }
             }
