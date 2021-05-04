@@ -1,0 +1,40 @@
+{
+    "dynamic": "strict",
+    "properties": {
+        "id": {
+            "type": "keyword"
+        },
+        "model_name": {
+            "type": "keyword"
+        },
+        "model_id": {
+            "type": "keyword"
+        },
+        "created_at": {
+            "format": "epoch_millis",
+            "type": "date"
+        },
+        "data_paths": {
+            "type": "keyword"
+        },
+        "pre_gen_output_paths": {
+            "type": "keyword"
+        },
+        "is_default_run": {
+            "type": "boolean"
+        },
+        "parameters": {
+            "properties": {
+                "name": {
+                    "type": "keyword"
+                },
+                "value": {
+                    "type": "keyword"
+                }
+            }
+        },
+        "tags": {
+            "type": "keyword"
+        }
+    }
+}
