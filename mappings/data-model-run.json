@@ -1,0 +1,49 @@
+{
+    "dynamic": "strict",
+    "properties": {
+        "id": {
+            "type": "keyword"
+        },
+        "model_name": {
+            "type": "keyword"
+        },
+        "model_id": {
+            "type": "keyword"
+        },
+        "created_at": {
+            "format": "epoch_millis||yyyy-MM-dd HH:mm:ss",
+            "type": "date"
+        },
+        "flow_id": {
+            "type": "keyword"
+        },
+        "use_case_id": {
+            "type": "keyword"
+        },
+        "data_paths": {
+            "type": "keyword"
+        },
+        "pre_gen_output_paths": {
+            "type": "keyword"
+        },
+        "is_default_run": {
+            "type": "boolean"
+        },
+        "parameters": {
+            "properties": {
+                "name": {
+                    "type": "keyword"
+                },
+                "value": {
+                    "type": "keyword"
+                }
+            }
+        },
+        "tags": {
+            "type": "keyword"
+        },
+        "status": {
+            "type": "keyword"
+        }
+    }
+}
