@@ -44,6 +44,16 @@
         },
         "status": {
             "type": "keyword"
+        },
+        "output_agg_values": {
+            "properties": {
+                "name": {
+                    "type": "keyword"
+                },
+                "value": {
+                    "type": "float"
+                }
+            }
         }
     }
 }
