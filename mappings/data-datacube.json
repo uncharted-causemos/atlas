@@ -1,0 +1,279 @@
+{
+    "dynamic": "strict",
+    "properties": {
+        "id": {
+            "type": "keyword"
+        },
+        "name": {
+            "type": "keyword",
+            "copy_to": "_search"
+        },
+        "description": {
+            "type": "text",
+            "copy_to": "_search"
+        },
+        "created_at": {
+            "type": "date"
+        },
+        "type": {
+            "type": "keyword"
+        },
+        "category": {
+            "type": "keyword",
+            "copy_to": "_search"
+        },
+        "maintainer": {
+            "properties": {
+                "name": {
+                    "type": "keyword",
+                    "copy_to": "_search"
+                },
+                "organization": {
+                    "type": "keyword",
+                    "copy_to": "_search"
+                },
+                "email": {
+                    "type": "keyword",
+                    "copy_to": "_search"
+                },
+                "website": {
+                    "type": "keyword",
+                    "copy_to": "_search"
+                }
+            }
+        },
+        "data_paths": {
+            "type": "keyword"
+        },
+        "observed_data": {
+            "type": "keyword"
+        },
+        "is_stochastic": {
+            "type": "boolean"
+        },
+        "tags": {
+            "type": "keyword",
+            "copy_to": "_search"
+        },
+        "geography": {
+            "properties": {
+                "country": {
+                    "type": "keyword",
+                    "copy_to": "_search"
+                },
+                "admin1": {
+                    "type": "keyword",
+                    "copy_to": "_search"
+                },
+                "admin2": {
+                    "type": "keyword",
+                    "copy_to": "_search"
+                },
+                "admin3": {
+                    "type": "keyword",
+                    "copy_to": "_search"
+                }
+            }
+        },
+        "period": {
+            "properties": {
+                "gte": {
+                    "type": "date"
+                },
+                "lte": {
+                    "type": "date"
+                }
+            }
+        },
+        "concepts": {
+            "type": "nested",
+            "properties": {
+                "name": { 
+                    "type": "keyword"
+                },
+                "score":{
+                    "type": "float"
+                }
+            }
+        },
+        "parameters": {
+            "properties": {
+
+                "name": {
+
+                    "type": "keyword",
+                    "copy_to": "_search"
+                },
+                "display_name": {
+                    "type": "keyword",
+                    "copy_to": "_search"
+                },
+                "description": {
+                    "type": "text",
+                    "copy_to": "_search"
+                },
+                "type": {
+                    "type": "keyword"
+                },
+                "unit": {
+                    "type": "keyword"
+                },
+                "unit_description": {
+                    "type": "text"
+                },
+                "ontologies": {
+                    "properties": {
+                        "concepts": {
+                            "properties": {
+                                "name": {
+                                    "type": "keyword"
+                                },
+                                "score": {
+                                    "type": "float"
+                                }
+                            }
+                        },
+                        "processes": {
+                            "properties": {
+                                "name": {
+                                    "type": "keyword"
+                                },
+                                "score": {
+                                    "type": "float"
+                                }
+                            }
+                        },
+                        "properties": {
+                            "properties": {
+                                "name": {
+                                    "type": "keyword"
+                                },
+                                "score": {
+                                    "type": "float"
+                                }
+                            }
+                        }
+                    }
+                },
+                "is_drilldown": {
+                    "type": "boolean"
+                },
+                "data_type": {
+                    "type": "keyword"
+                },
+                "default": {
+                    "type": "keyword"
+                },
+                "choices": {
+                    "type": "keyword"
+                },
+                "min": {
+                    "type": "float"
+                },
+                "max": {
+                    "type": "float"
+                },
+                "additional_options": {
+                    "type": "object",
+                    "enabled": false
+                },
+                "tags": {
+                    "type": "keyword",
+                    "copy_to": "_search"
+                }
+            }
+        },
+        "outputs": {
+            "properties": {
+                "name": {
+                    "type": "keyword",
+                    "copy_to": "_search"
+                },
+                "display_name": {
+                    "type": "keyword",
+                    "copy_to": "_search"
+                },
+                "description": {
+                    "type": "text",
+                    "copy_to": "_search"
+                },
+                "type": {
+                    "type": "keyword"
+                },
+                "unit": {
+                    "type": "keyword"
+                },
+                "unit_description": {
+                    "type": "text"
+                },
+                "ontologies": {
+                    "properties": {
+                        "concepts": {
+                            "properties": {
+                                "name": {
+                                    "type": "keyword"
+                                },
+                                "score": {
+                                    "type": "float"
+                                }
+                            }
+                        },
+                        "processes": {
+                            "properties": {
+                                "name": {
+                                    "type": "keyword"
+                                },
+                                "score": {
+                                    "type": "float"
+                                }
+                            }
+                        },
+                        "properties": {
+                            "properties": {
+                                "name": {
+                                    "type": "keyword"
+                                },
+                                "score": {
+                                    "type": "float"
+                                }
+                            }
+                        }
+                    }
+                },
+                "data_resolution": {
+                    "properties": {
+                        "temporal_resolution": {
+                            "type": "keyword"
+                        },
+                        "spatial_resolution": {
+                            "type": "float"
+                        }
+                    }
+                },
+                "choices": {
+                    "type": "keyword"
+                },
+                "min": {
+                    "type": "float"
+                },
+                "max": {
+                    "type": "float"
+                },
+                "additional_options": {
+                    "type": "object",
+                    "enabled": false
+                },
+                "tags": {
+                    "type": "keyword",
+                    "copy_to": "_search"
+                }
+            }
+        },
+        "status": {
+            "type": "keyword"
+        },
+        "_search": {
+            "type": "text"
+        }
+    }
+}
