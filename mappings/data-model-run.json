@@ -11,8 +11,36 @@
             "type": "keyword"
         },
         "created_at": {
-            "format": "epoch_millis||yyyy-MM-dd HH:mm:ss",
+            "format": "epoch_millis",
             "type": "date"
+        },
+        "runtimes": {
+            "properties": {
+                "execution": {
+                    "properties": {
+                        "start": {
+                            "format": "epoch_millis",
+                            "type": "date"
+                        },
+                        "end": {
+                            "format": "epoch_millis",
+                            "type": "date"
+                        }
+                    }
+                },
+                "post_processing": {
+                    "properties": {
+                        "start": {
+                            "format": "epoch_millis",
+                            "type": "date"
+                        },
+                        "end": {
+                            "format": "epoch_millis",
+                            "type": "date"
+                        }
+                    }
+                }
+            }
         },
         "flow_id": {
             "type": "keyword"
@@ -44,6 +72,16 @@
         },
         "status": {
             "type": "keyword"
+        },
+        "output_agg_values": {
+            "properties": {
+                "name": {
+                    "type": "keyword"
+                },
+                "value": {
+                    "type": "float"
+                }
+            }
         }
     }
 }
