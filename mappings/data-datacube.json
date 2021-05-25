@@ -13,6 +13,7 @@
             "copy_to": "_search"
         },
         "created_at": {
+            "format": "epoch_millis",
             "type": "date"
         },
         "type": {
@@ -78,9 +79,11 @@
         "period": {
             "properties": {
                 "gte": {
+                    "format": "epoch_millis",
                     "type": "date"
                 },
                 "lte": {
+                    "format": "epoch_millis",
                     "type": "date"
                 }
             }
