@@ -10,6 +10,9 @@
         "statement_id": {
             "type": "keyword"
         },
+        "matches_hash": {
+            "type": "keyword"
+        },
         "update_type": {
             "type": "keyword"
         },
