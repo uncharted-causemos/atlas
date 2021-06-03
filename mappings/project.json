@@ -11,25 +11,28 @@
             "format": "epoch_millis",
             "type": "date"
         },
+        "description": {
+            "type": "text"
+        },
+        "extended_at": {
+            "format": "epoch_millis",
+            "type": "date"
+        },
         "id": {
             "type": "keyword"
         },
-        "name": {
+        "kb_id": {
             "type": "keyword"
         },
         "modified_at": {
             "format": "epoch_millis",
             "type": "date"
         },
+        "name": {
+            "type": "keyword"
+        },
         "ontology": {
             "type": "keyword"
-        },
-        "kb_id": {
-            "type": "keyword"
-        },
-        "extended_at": {
-            "format": "epoch_millis",
-            "type": "date"
         }
     }
 }
