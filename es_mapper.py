@@ -12,7 +12,7 @@ logger.setLevel(20)
 
 def scan_directory(directory):
     """
-    Returns absolute path of json files 
+    Returns absolute path of json files
     """
     mapping_files = []
     for f in os.listdir(directory):
@@ -28,7 +28,16 @@ def create_index(client, index_name, index_mappings):
     """
     settings = {
         "index.number_of_shards": 1,
-        "index.number_of_replicas": 0
+        "index.number_of_replicas": 0,
+        "analysis": {
+            "analyzer": {
+                "parseregex-slash-underscore": {
+                    "type": "pattern",
+                    "pattern": "[_/]",
+                    "lowercase": True
+                }
+            }
+        }
     }
 
     response = client.indices.create(
@@ -41,7 +50,7 @@ def create_index(client, index_name, index_mappings):
         logger.info(f"\t{status}")
     else:
         logger.info(f"\t{response}")
-        
+
 
 if __name__ == "__main__":
     host = os.environ.get("HOST")
