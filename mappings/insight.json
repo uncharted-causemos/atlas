@@ -20,7 +20,10 @@
         "project_id": {
             "type": "keyword"
         },
-        "model_id": {
+        "analysis_id": {
+            "type": "keyword"
+        },
+        "context_id": {
             "type": "keyword"
         },
         "url": {
@@ -30,10 +33,10 @@
             "type": "keyword"
         },
         "pre_actions": {
-            "enabled": "false"
+            "enabled": false
         },
         "post_actions": {
-            "enabled": "false"
+            "enabled": false
         },
         "is_default": {
             "type": "boolean"
@@ -42,17 +45,19 @@
             "type": "text"
         },
         "thumbnail": {
-            "enabled": "false"
+            "enabled": false
         },
         "view_state": {
             "type": "object",
             "dynamic": true,
-            "properties": {}
+            "properties": {},
+            "enabled": false
         },
         "data_state": {
             "type": "object",
             "dynamic": true,
-            "properties": {}
+            "properties": {},
+            "enabled": false
         }
     }
 }
