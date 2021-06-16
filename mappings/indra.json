@@ -64,6 +64,7 @@
                 },
                 "topic": {
                     "type": "text",
+                    "analyzer": "concept-text",
                     "fields": {
                       "raw": {
                         "type": "keyword"
@@ -107,6 +108,7 @@
                 },
                 "concept": {
                     "type": "text",
+                    "analyzer": "concept-text",
                     "copy_to": "wm.topic",
                     "fields": {
                       "raw": {
@@ -214,6 +216,7 @@
                 },
                 "concept": {
                     "type": "text",
+                    "analyzer": "concept-text",
                     "copy_to": "wm.topic",
                     "fields": {
                       "raw": {
