@@ -12,7 +12,7 @@ logger.setLevel(20)
 
 def scan_directory(directory):
     """
-    Returns absolute path of json files 
+    Returns absolute path of json files
     """
     mapping_files = []
     for f in os.listdir(directory):
@@ -28,7 +28,16 @@ def create_index(client, index_name, index_mappings):
     """
     settings = {
         "index.number_of_shards": 1,
-        "index.number_of_replicas": 0
+        "index.number_of_replicas": 0,
+        "analysis": {
+            "analyzer": {
+                "concept-text": {
+                    "type": "pattern",
+                    "pattern": "[_/]",
+                    "lowercase": True
+                }
+            }
+        }
     }
 
     response = client.indices.create(
@@ -41,7 +50,7 @@ def create_index(client, index_name, index_mappings):
         logger.info(f"\t{status}")
     else:
         logger.info(f"\t{response}")
-        
+
 
 if __name__ == "__main__":
     host = os.environ.get("HOST")
@@ -62,3 +71,16 @@ if __name__ == "__main__":
             content = F.read()
             content = json.loads(content)
             create_index(client, index_name, content)
+
+        # indra is a template index used to instantiate new indices, in order to clone the index we need
+        # to put it into a read-only state
+        if index_name == "indra":
+            logger.info("Setting indra to readonly")
+            body = {
+                "index": {
+                    "blocks.write": True,
+                    "blocks.read_only": True
+                }
+            }
+            client.indices.put_settings(body, index_name)
+
