@@ -31,7 +31,7 @@ def create_index(client, index_name, index_mappings):
         "index.number_of_replicas": 0,
         "analysis": {
             "analyzer": {
-                "parseregex-slash-underscore": {
+                "concept-text": {
                     "type": "pattern",
                     "pattern": "[_/]",
                     "lowercase": True
