@@ -2,7 +2,7 @@
 atlas provides schemas and mappings for World Modelers
 
 
-#### Run 
+#### Creating initial indices/mappings
 ```
-PORT=<port> HOST=<host> python es_mapper.py
+ES=<host:port> python es_mapper.py
 ```

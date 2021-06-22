@@ -53,15 +53,14 @@ def create_index(client, index_name, index_mappings):
 
 
 if __name__ == "__main__":
-    host = os.environ.get("HOST")
-    port = os.environ.get("PORT")
+    esURL = os.environ.get("ES")
     mappings = scan_directory("./mappings")
 
-    if host == None or port == None:
-        logger.error("ES host or port not specified")
+    if esURL == None: 
+        logger.error("ES URL not specified")
         exit(-1)
 
-    client = Elasticsearch(host, port=port)
+    client = Elasticsearch([esURL])
 
     for mapping_file in mappings:
         index_name = mapping_file.split("/")[-1].split(".")[0]
