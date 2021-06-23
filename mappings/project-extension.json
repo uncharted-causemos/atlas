@@ -5,7 +5,15 @@
         "type": "keyword"
       },
       "document": {
-        "type": "keyword"
+        "type": "object",
+        "properties": {
+          "document_id": {
+            "type": "keyword"
+          },
+          "name": {
+            "type": "keyword"
+          }
+        }
       }
     }
 }
