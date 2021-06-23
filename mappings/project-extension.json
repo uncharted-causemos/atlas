@@ -1,31 +1,19 @@
 {
     "dynamic": "strict",
     "properties": {
-        "id": {
+      "project_id": {
+        "type": "keyword"
+      },
+      "document": {
+        "type": "object",
+        "properties": {
+          "document_id": {
             "type": "keyword"
-        },
-        "project_id": {
+          },
+          "name": {
             "type": "keyword"
-        },
-        "created_at": {
-            "format": "epoch_millis",
-            "type": "date"
-        },
-        "records": {
-            "properties": {
-              "document_id": {
-                "type": "keyword"
-              },
-              "version": {
-                "type": "keyword"
-              },
-              "identity": {
-                "type": "keyword"
-              },
-              "storage_key": {
-                "type": "keyword"
-              }
-            }
+          }
         }
+      }
     }
 }

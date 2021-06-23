@@ -1,0 +1,31 @@
+{
+    "dynamic": "strict",
+    "properties": {
+        "id": {
+            "type": "keyword"
+        },
+        "project_id": {
+            "type": "keyword"
+        },
+        "created_at": {
+            "format": "epoch_millis",
+            "type": "date"
+        },
+        "records": {
+            "properties": {
+              "document_id": {
+                "type": "keyword"
+              },
+              "version": {
+                "type": "keyword"
+              },
+              "identity": {
+                "type": "keyword"
+              },
+              "storage_key": {
+                "type": "keyword"
+              }
+            }
+        }
+    }
+}
