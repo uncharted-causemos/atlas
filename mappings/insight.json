@@ -1,5 +1,5 @@
 {
-    "dynamic": "strict",
+    "dynamic": "true",
     "properties": {
         "id": {
             "type": "keyword"
@@ -33,9 +33,11 @@
             "type": "keyword"
         },
         "pre_actions": {
+            "type": "object",
             "enabled": false
         },
         "post_actions": {
+            "type": "object",
             "enabled": false
         },
         "is_default": {
@@ -45,19 +47,20 @@
             "type": "text"
         },
         "thumbnail": {
+            "type": "object",
             "enabled": false
         },
         "view_state": {
             "type": "object",
-            "dynamic": true,
-            "properties": {},
-            "enabled": false
+            "dynamic": "true",
+            "enabled": false,
+            "properties": {}
         },
         "data_state": {
             "type": "object",
-            "dynamic": true,
-            "properties": {},
-            "enabled": false
+            "dynamic": "true",
+            "enabled": false,
+            "properties": {}
         }
     }
 }
