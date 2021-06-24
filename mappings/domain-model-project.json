@@ -14,13 +14,16 @@
         "name": {
             "type": "keyword"
         },
-        "published_instances": {
+        "ready_instances": {
             "type": "keyword"
         },
-        "registered_instances": {
+        "draft_instances": {
             "type": "keyword"
         },
         "source": {
+            "type": "keyword"
+        },
+        "type": {
             "type": "keyword"
         }
     }
