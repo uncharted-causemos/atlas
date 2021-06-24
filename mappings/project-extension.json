@@ -14,6 +14,10 @@
             "type": "keyword"
           }
         }
+      },
+      "modified_at": {
+        "format": "epoch_millis",
+        "type": "date"
       }
     }
 }
