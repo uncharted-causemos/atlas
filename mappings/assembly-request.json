@@ -26,6 +26,13 @@
                 "type": "keyword"
               }
             }
+        },
+        "status": {
+          "type": "keyword"
+        },
+        "result": {
+            "dynamic": "true",
+            "properties": {}
         }
     }
 }
