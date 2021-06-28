@@ -417,12 +417,14 @@
                             }
                         },
                         "origin": {
-                          "assembly_request_id": {
-                            "type": "keyword"
-                          },
-                          "modified_at": {
-                            "type": "date",
-                            "format": "epoch_millis"
+                          "properties": {
+                            "assembly_request_id": {
+                              "type": "keyword"
+                            },
+                            "modified_at": {
+                              "type": "date",
+                              "format": "epoch_millis"
+                            }
                           }
                         }
                     }
