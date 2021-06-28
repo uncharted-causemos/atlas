@@ -16,8 +16,8 @@
         }
       },
       "modified_at": {
-        "format": "epoch_millis",
-        "type": "date"
+        "type": "date",
+        "format": "epoch_millis"
       }
     }
 }
