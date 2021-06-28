@@ -416,7 +416,7 @@
                                 }
                             }
                         },
-                        "extension": {
+                        "origin": {
                           "assembly_request_id": {
                             "type": "keyword"
                           },
