@@ -69,7 +69,7 @@
         "default_view": {
             "type": "object",
             "dynamic": "true",
-            "enabled": false,
+            "enabled": "false",
             "properties": {}
         },
         "geography": {
@@ -192,7 +192,7 @@
                 },
                 "additional_options": {
                     "type": "object",
-                    "enabled": false
+                    "enabled": "false"
                 },
                 "tags": {
                     "type": "keyword",
@@ -278,7 +278,7 @@
                 },
                 "additional_options": {
                     "type": "object",
-                    "enabled": false
+                    "enabled": "false"
                 },
                 "is_primary": {
                     "type": "boolean"
