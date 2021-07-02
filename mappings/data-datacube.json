@@ -4,12 +4,19 @@
         "id": {
             "type": "keyword"
         },
+        "data_id": {
+            "type": "keyword"
+        },
         "name": {
             "type": "keyword",
             "copy_to": "_search"
         },
         "description": {
             "type": "text",
+            "copy_to": "_search"
+        },
+        "family_name": {
+            "type": "keyword",
             "copy_to": "_search"
         },
         "created_at": {
@@ -56,6 +63,15 @@
             "type": "keyword",
             "copy_to": "_search"
         },
+        "default_feature": {
+            "type": "keyword"
+        },
+        "default_view": {
+            "type": "object",
+            "dynamic": "true",
+            "enabled": "false",
+            "properties": {}
+        },
         "geography": {
             "properties": {
                 "country": {
@@ -101,9 +117,7 @@
         },
         "parameters": {
             "properties": {
-
                 "name": {
-
                     "type": "keyword",
                     "copy_to": "_search"
                 },
@@ -178,7 +192,7 @@
                 },
                 "additional_options": {
                     "type": "object",
-                    "enabled": false
+                    "enabled": "false"
                 },
                 "tags": {
                     "type": "keyword",
@@ -264,11 +278,79 @@
                 },
                 "additional_options": {
                     "type": "object",
-                    "enabled": false
+                    "enabled": "false"
+                },
+                "is_primary": {
+                    "type": "boolean"
                 },
                 "tags": {
                     "type": "keyword",
                     "copy_to": "_search"
+                }
+            }
+        },
+        "qualifier_outputs": {
+            "properties": {
+                "name": {
+                    "type": "keyword",
+                    "copy_to": "_search"
+                },
+                "display_name": {
+                    "type": "keyword",
+                    "copy_to": "_search"
+                },
+                "description": {
+                    "type": "text",
+                    "copy_to": "_search"
+                },
+                "type": {
+                    "type": "keyword"
+                },
+                "unit": {
+                    "type": "keyword"
+                },
+                "unit_description": {
+                    "type": "text"
+                },
+                "ontologies": {
+                    "properties": {
+                        "concepts": {
+                            "properties": {
+                                "name": {
+                                    "type": "keyword"
+                                },
+                                "score": {
+                                    "type": "float"
+                                }
+                            }
+                        },
+                        "processes": {
+                            "properties": {
+                                "name": {
+                                    "type": "keyword"
+                                },
+                                "score": {
+                                    "type": "float"
+                                }
+                            }
+                        },
+                        "properties": {
+                            "properties": {
+                                "name": {
+                                    "type": "keyword"
+                                },
+                                "score": {
+                                    "type": "float"
+                                }
+                            }
+                        }
+                    }
+                },
+                "related_features": {
+                    "type": "keyword"
+                },
+                "roles": {
+                    "type": "keyword"
                 }
             }
         },
