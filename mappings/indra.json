@@ -79,7 +79,12 @@
         "subj": {
             "properties": {
                 "factor": {
-                    "type": "text"
+                    "type": "text",
+                    "fields": {
+                      "raw": {
+                        "type": "keyword"
+                      }
+                    }
                 },
                 "adjectives": {
                     "type": "keyword"
@@ -187,7 +192,12 @@
         "obj": {
             "properties": {
                 "factor": {
-                    "type": "text"
+                    "type": "text",
+                    "fields": {
+                      "raw": {
+                        "type": "keyword"
+                      }
+                    }
                 },
                 "adjectives": {
                     "type": "keyword"
