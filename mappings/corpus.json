@@ -28,14 +28,14 @@
                 "byod_tag": {
                     "type": "keyword"
                 },
-                "tag": {
-                    "type": "keyword"
-                },
                 "modified_at": {
                     "type": "date",
                     "format": "epoch_millis"
                 }
             }
+        },
+        "label": {
+          "type": "keyword"
         },
         "author": {
             "type": "keyword"

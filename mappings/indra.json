@@ -351,6 +351,9 @@
                         "file_type": {
                             "type": "keyword"
                         },
+                        "label": {
+                          "type": "keyword"
+                        },
                         "author": {
                             "type": "text",
                             "fields": {
@@ -432,9 +435,6 @@
                               "type": "keyword"
                             },
                             "byod_tag": {
-                                "type": "keyword"
-                            },
-                            "tag": {
                                 "type": "keyword"
                             },
                             "modified_at": {
