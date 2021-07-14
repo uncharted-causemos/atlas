@@ -351,6 +351,9 @@
                         "file_type": {
                             "type": "keyword"
                         },
+                        "label": {
+                          "type": "keyword"
+                        },
                         "author": {
                             "type": "text",
                             "fields": {
@@ -430,6 +433,9 @@
                           "properties": {
                             "assembly_request_id": {
                               "type": "keyword"
+                            },
+                            "byod_tag": {
+                                "type": "keyword"
                             },
                             "modified_at": {
                               "type": "date",
