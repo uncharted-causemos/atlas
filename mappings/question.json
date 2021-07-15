@@ -5,7 +5,7 @@
             "type": "keyword"
         },
         "question": {
-            "type": "keyword"
+            "type": "text"
         },
         "description": {
             "type": "text"
@@ -41,7 +41,7 @@
             "enabled": false
         },
         "linked_insights": {
-            "type": "text"
+            "type": "keyword"
         },
         "view_state": {
             "type": "object",

@@ -5,7 +5,7 @@
             "type": "keyword"
         },
         "name": {
-            "type": "keyword"
+            "type": "text"
         },
         "description": {
             "type": "text"
@@ -44,7 +44,7 @@
             "type": "boolean"
         },
         "analytical_question": {
-            "type": "text"
+            "type": "keyword"
         },
         "thumbnail": {
             "type": "object",
