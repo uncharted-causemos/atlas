@@ -34,8 +34,45 @@
             "properties": {}
         },
         "result": {
-            "dynamic": "true",
-            "properties": {}
+            "properties": {
+              "concept": {
+                "type": "keyword"
+              },
+              "confidenceInterval": {
+                "properties": {
+                  "lower": {
+                    "properties": {
+                      "timestamp": {
+                        "type": "long"
+                      },
+                      "value": {
+                        "type": "float"
+                      }
+                    }
+                  },
+                  "upper": {
+                    "properties": {
+                      "timestamp": {
+                        "type": "long"
+                      },
+                      "value": {
+                        "type": "float"
+                      }
+                    }
+                  }
+                }
+              },
+              "values": {
+                "properties": {
+                  "timestamp": {
+                    "type": "long"
+                  },
+                  "value": {
+                    "type": "float"
+                  }
+                }
+              }
+            }
         }
     }
 }
