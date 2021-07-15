@@ -4,7 +4,7 @@
         "id": {
             "type": "keyword"
         },
-        "name": {
+        "question": {
             "type": "text"
         },
         "description": {
@@ -40,23 +40,10 @@
             "type": "object",
             "enabled": false
         },
-        "is_default": {
-            "type": "boolean"
-        },
-        "analytical_question": {
+        "linked_insights": {
             "type": "keyword"
         },
-        "thumbnail": {
-            "type": "object",
-            "enabled": false
-        },
         "view_state": {
-            "type": "object",
-            "dynamic": "true",
-            "enabled": false,
-            "properties": {}
-        },
-        "data_state": {
             "type": "object",
             "dynamic": "true",
             "enabled": false,
