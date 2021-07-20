@@ -21,42 +21,8 @@
           "format": "epoch_millis"
         },
         "parameter": {
-            "properties": {
-                "indicator_id": {
-                    "type": "keyword"
-                },
-                "indicator_name": {
-                    "type": "keyword"
-                },
-                "indicator_source": {
-                    "type": "keyword"
-                },
-                "indicator_score": {
-                    "type": "float"
-                },
-                "initial_value": {
-                    "type": "float"
-                },
-                "initial_value_parameter": {
-                    "properties": {},
-                    "dynamic": "true"
-                },
-                "indicator_time_series": {
-                    "properties": {
-                        "value": {
-                            "type": "float"
-                        },
-                        "timestamp": {
-                            "type": "date",
-                            "format": "epoch_millis"
-                        }
-                    }
-                },
-                "indicator_time_series_parameter": {
-                    "properties": {},
-                    "dynamic": "true"
-                }
-            }
+            "properties": {},
+            "dynamic": "true"
         }
     }
 }
