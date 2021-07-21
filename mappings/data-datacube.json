@@ -8,16 +8,23 @@
             "type": "keyword"
         },
         "name": {
-            "type": "keyword",
-            "copy_to": "_search"
+            "type": "text",
+            "fields": {
+              "raw": {
+                "type": "keyword"
+              }
+            }
         },
         "description": {
-            "type": "text",
-            "copy_to": "_search"
+            "type": "text"
         },
         "family_name": {
-            "type": "keyword",
-            "copy_to": "_search"
+            "type": "text",
+            "fields": {
+              "raw": {
+                "type": "keyword"
+              }
+            }
         },
         "created_at": {
             "format": "epoch_millis",
@@ -27,26 +34,36 @@
             "type": "keyword"
         },
         "category": {
-            "type": "keyword",
-            "copy_to": "_search"
+            "type": "text",
+            "fields": {
+              "raw": {
+                "type": "keyword"
+              }
+            }
         },
         "maintainer": {
             "properties": {
                 "name": {
-                    "type": "keyword",
-                    "copy_to": "_search"
+                    "type": "text",
+                    "fields": {
+                      "raw": {
+                        "type": "keyword"
+                      }
+                    }
                 },
                 "organization": {
-                    "type": "keyword",
-                    "copy_to": "_search"
+                    "type": "text",
+                    "fields": {
+                      "raw": {
+                        "type": "keyword"
+                      }
+                    }
                 },
                 "email": {
-                    "type": "keyword",
-                    "copy_to": "_search"
+                    "type": "keyword"
                 },
                 "website": {
-                    "type": "keyword",
-                    "copy_to": "_search"
+                    "type": "keyword"
                 }
             }
         },
@@ -60,8 +77,12 @@
             "type": "boolean"
         },
         "tags": {
-            "type": "keyword",
-            "copy_to": "_search"
+            "type": "text",
+            "fields": {
+              "raw": {
+                "type": "keyword"
+              }
+            }
         },
         "default_feature": {
             "type": "keyword"
@@ -75,20 +96,36 @@
         "geography": {
             "properties": {
                 "country": {
-                    "type": "keyword",
-                    "copy_to": "_search"
+                    "type": "text",
+                    "fields": {
+                      "raw": {
+                        "type": "keyword"
+                      }
+                    }
                 },
                 "admin1": {
-                    "type": "keyword",
-                    "copy_to": "_search"
+                    "type": "text",
+                    "fields": {
+                      "raw": {
+                        "type": "keyword"
+                      }
+                    }
                 },
                 "admin2": {
-                    "type": "keyword",
-                    "copy_to": "_search"
+                    "type": "text",
+                    "fields": {
+                      "raw": {
+                        "type": "keyword"
+                      }
+                    }
                 },
                 "admin3": {
-                    "type": "keyword",
-                    "copy_to": "_search"
+                    "type": "text",
+                    "fields": {
+                      "raw": {
+                        "type": "keyword"
+                      }
+                    }
                 }
             }
         },
@@ -108,7 +145,13 @@
             "type": "nested",
             "properties": {
                 "name": { 
-                    "type": "keyword"
+                    "type": "text",
+                    "analyzer": "concept-text",
+                    "fields": {
+                      "raw": {
+                        "type": "keyword"
+                      }
+                    }
                 },
                 "score":{
                     "type": "float"
@@ -118,16 +161,18 @@
         "parameters": {
             "properties": {
                 "name": {
-                    "type": "keyword",
-                    "copy_to": "_search"
+                    "type": "keyword"
                 },
                 "display_name": {
-                    "type": "keyword",
-                    "copy_to": "_search"
+                    "type": "text",
+                    "fields": {
+                      "raw": {
+                        "type": "keyword"
+                      }
+                    }
                 },
                 "description": {
-                    "type": "text",
-                    "copy_to": "_search"
+                    "type": "text"
                 },
                 "type": {
                     "type": "keyword"
@@ -195,24 +240,25 @@
                     "enabled": "false"
                 },
                 "tags": {
-                    "type": "keyword",
-                    "copy_to": "_search"
+                    "type": "keyword"
                 }
             }
         },
         "outputs": {
             "properties": {
                 "name": {
-                    "type": "keyword",
-                    "copy_to": "_search"
+                    "type": "keyword"
                 },
                 "display_name": {
-                    "type": "keyword",
-                    "copy_to": "_search"
+                    "type": "text",
+                    "fields": {
+                      "raw": {
+                        "type": "keyword"
+                      }
+                    }
                 },
                 "description": {
-                    "type": "text",
-                    "copy_to": "_search"
+                    "type": "text"
                 },
                 "type": {
                     "type": "keyword"
@@ -284,24 +330,25 @@
                     "type": "boolean"
                 },
                 "tags": {
-                    "type": "keyword",
-                    "copy_to": "_search"
+                    "type": "keyword"
                 }
             }
         },
         "qualifier_outputs": {
             "properties": {
                 "name": {
-                    "type": "keyword",
-                    "copy_to": "_search"
+                    "type": "keyword"
                 },
                 "display_name": {
-                    "type": "keyword",
-                    "copy_to": "_search"
+                    "type": "text",
+                    "fields": {
+                      "raw": {
+                        "type": "keyword"
+                      }
+                    }
                 },
                 "description": {
-                    "type": "text",
-                    "copy_to": "_search"
+                    "type": "text"
                 },
                 "type": {
                     "type": "keyword"
@@ -356,9 +403,6 @@
         },
         "status": {
             "type": "keyword"
-        },
-        "_search": {
-            "type": "text"
         }
     }
 }
