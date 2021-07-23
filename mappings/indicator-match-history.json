@@ -1,0 +1,21 @@
+{
+    "dynamic": "strict",
+    "properties": {
+        "id": {
+            "type": "keyword"
+        },
+        "project_id": {
+            "type": "keyword"
+        },
+        "node_id": {
+            "type": "keyword"
+        },
+        "indicator_id": {
+            "type": "keyword"
+        },
+        "timestamp": {
+            "format": "epoch_millis",
+            "type": "date"
+        }
+    }
+}
