@@ -7,15 +7,14 @@
         "project_id": {
             "type": "keyword"
         },
-        "node_id": {
+        "concept": {
             "type": "keyword"
         },
         "indicator_id": {
             "type": "keyword"
         },
-        "timestamp": {
-            "format": "epoch_millis",
-            "type": "date"
+        "frequency": {
+            "type": "integer"
         }
     }
 }
