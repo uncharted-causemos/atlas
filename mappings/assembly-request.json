@@ -12,23 +12,11 @@
             "type": "date"
         },
         "records": {
-            "properties": {
-              "document_id": {
-                "type": "keyword"
-              },
-              "version": {
-                "type": "keyword"
-              },
-              "identity": {
-                "type": "keyword"
-              },
-              "storage_key": {
-                "type": "keyword"
-              }
-            }
+            "dynamic": "true",
+            "properties": {}
         },
         "status": {
-          "type": "keyword"
+            "type": "keyword"
         },
         "result": {
             "dynamic": "true",
