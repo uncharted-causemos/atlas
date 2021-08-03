@@ -220,6 +220,9 @@
                 "is_drilldown": {
                     "type": "boolean"
                 },
+                "is_visible": {
+                    "type": "boolean"
+                },
                 "data_type": {
                     "type": "keyword"
                 },
@@ -327,6 +330,9 @@
                     "enabled": "false"
                 },
                 "is_primary": {
+                    "type": "boolean"
+                },
+                "is_visible": {
                     "type": "boolean"
                 },
                 "tags": {
