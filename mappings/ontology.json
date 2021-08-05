@@ -2,7 +2,7 @@
     "dynamic": "strict",
     "properties": {
         "examples": {
-            "type": "keyword"
+            "type": "text"
         },
         "definition": {
             "type": "text"
