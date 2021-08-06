@@ -1,4 +1,5 @@
 import os
+import sys
 from elasticsearch import Elasticsearch
 import logging
 
@@ -21,12 +22,23 @@ def scan_directory(directory):
 ES = "http://localhost:9200"
 
 if __name__ == "__main__":
-    mappings = scan_directory("./mappings")
+    mappings = [mapping.split("/")[-1] for mapping in scan_directory("./mappings")]
     client = Elasticsearch([ES])
+
+
+    if len(sys.argv) > 1:
+        indices = sys.argv[1:]
+        indices = [mapping_file + ".json" for mapping_file in indices]
+        print(indices)
+        for json_file in indices:
+            if json_file not in mappings:
+                logger.error(f"JSON file {json_file} does not exist")
+                exit(-1)
+        mappings = indices
 
     # Clean out defined mappings
     for mapping_file in mappings:
-        index_name = mapping_file.split("/")[-1].split(".")[0]
+        index_name = mapping_file.split(".")[0]
 
         if client.indices.exists(index=index_name) == False:
             continue
@@ -45,17 +57,18 @@ if __name__ == "__main__":
         client.indices.delete(index=index_name)
 
 
-    # Clean out dynamic, user created indices
-    indices = client.indices.get("*").keys()
-    for index_name in indices:
+    if len(sys.argv) == 1:
+        # Clean out dynamic, user created indices
+        indices = client.indices.get("*").keys()
+        for index_name in indices:
 
-        if index_name.startswith("indra") or index_name.startswith("project"):
-            logger.info(f"Deleting index {index_name}")
-            body = {
-                "index": {
-                    "blocks.write": False,
-                    "blocks.read_only": False 
+            if index_name.startswith("indra") or index_name.startswith("project"):
+                logger.info(f"Deleting index {index_name}")
+                body = {
+                    "index": {
+                        "blocks.write": False,
+                        "blocks.read_only": False 
+                    }
                 }
-            }
-            client.indices.put_settings(body, index_name)
-            client.indices.delete(index=index_name)
+                client.indices.put_settings(body, index_name)
+                client.indices.delete(index=index_name)
