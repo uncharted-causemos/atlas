@@ -1,0 +1,20 @@
+{
+    "dynamic": "strict",
+    "properties": {
+        "id": {
+            "type": "keyword"
+        },
+        "project_id": {
+            "type": "keyword"
+        },
+        "concept": {
+            "type": "keyword"
+        },
+        "indicator_id": {
+            "type": "keyword"
+        },
+        "frequency": {
+            "type": "integer"
+        }
+    }
+}
