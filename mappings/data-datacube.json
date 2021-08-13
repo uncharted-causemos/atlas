@@ -319,6 +319,9 @@
                 "choices": {
                     "type": "keyword"
                 },
+                "choices_labels": {
+                    "type": "keyword"
+                },
                 "min": {
                     "type": "float"
                 },
