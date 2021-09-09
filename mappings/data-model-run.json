@@ -1,5 +1,5 @@
 {
-    "dynamic": "strict",
+    "dynamic": "false",
     "properties": {
         "id": {
             "type": "keyword"
@@ -52,7 +52,34 @@
             "type": "keyword"
         },
         "pre_gen_output_paths": {
-            "type": "keyword"
+            "properties": {
+                "file": {
+                    "type": "keyword"
+                },
+                "type": {
+                    "type": "keyword"
+                },
+                "timestamp": {
+                    "format": "epoch_millis",
+                    "type": "date"
+                },
+                "target": {
+                    "type": "keyword"
+                },
+                "description": {
+                    "type": "text"
+                },
+                "coords": {
+                    "properties": {
+                        "lat":{
+                            "type": "float"
+                        },
+                        "long":{
+                            "type": "float"
+                        }
+                    }
+                }
+            }
         },
         "is_default_run": {
             "type": "boolean"
