@@ -2,7 +2,16 @@
     "dynamic": "strict",
     "properties": {
         "examples": {
-            "type": "text"
+            "type": "text",
+            "term_vector": "with_positions_offsets",
+            "fields": {
+                "ngrams": {
+                    "type": "text",
+                    "search_analyzer": "standard",
+                    "analyzer": "concept-text",
+                    "term_vector": "with_positions_offsets"
+                }
+            }
         },
         "definition": {
             "type": "text"
