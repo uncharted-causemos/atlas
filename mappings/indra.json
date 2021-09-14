@@ -12,7 +12,7 @@
             "format": "epoch_millis"
         },
         "matches_hash": {
-          "type": "long"
+            "type": "long"
         },
         "wm": {
             "properties": {
@@ -66,9 +66,9 @@
                     "type": "text",
                     "analyzer": "concept-text",
                     "fields": {
-                      "raw": {
-                        "type": "keyword"
-                      }
+                        "raw": {
+                            "type": "keyword"
+                        }
                     }
                 },
                 "min_grounding_score": {
@@ -81,9 +81,9 @@
                 "factor": {
                     "type": "text",
                     "fields": {
-                      "raw": {
-                        "type": "keyword"
-                      }
+                        "raw": {
+                            "type": "keyword"
+                        }
                     }
                 },
                 "adjectives": {
@@ -116,9 +116,9 @@
                     "analyzer": "concept-text",
                     "copy_to": "wm.topic",
                     "fields": {
-                      "raw": {
-                        "type": "keyword"
-                      }
+                        "raw": {
+                            "type": "keyword"
+                        }
                     }
                 },
                 "concept_score": {
@@ -194,9 +194,9 @@
                 "factor": {
                     "type": "text",
                     "fields": {
-                      "raw": {
-                        "type": "keyword"
-                      }
+                        "raw": {
+                            "type": "keyword"
+                        }
                     }
                 },
                 "adjectives": {
@@ -229,9 +229,9 @@
                     "analyzer": "concept-text",
                     "copy_to": "wm.topic",
                     "fields": {
-                      "raw": {
-                        "type": "keyword"
-                      }
+                        "raw": {
+                            "type": "keyword"
+                        }
                     }
                 },
                 "concept_score": {
@@ -352,14 +352,19 @@
                             "type": "keyword"
                         },
                         "label": {
-                          "type": "keyword"
-                        },
-                        "author": {
                             "type": "text",
                             "fields": {
                               "raw": {
                                 "type": "keyword"
                               }
+                            }
+                        },
+                        "author": {
+                            "type": "text",
+                            "fields": {
+                                "raw": {
+                                    "type": "keyword"
+                                }
                             }
                         },
                         "document_source": {
@@ -394,17 +399,17 @@
                                 "loc": {
                                     "type": "text",
                                     "fields": {
-                                      "raw": {
-                                        "type": "keyword"
-                                      }
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
                                     }
                                 },
                                 "org": {
                                     "type": "text",
                                     "fields": {
-                                      "raw": {
-                                        "type": "keyword"
-                                      }
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
                                     }
                                 }
                             }
@@ -430,18 +435,23 @@
                             }
                         },
                         "origin": {
-                          "properties": {
-                            "assembly_request_id": {
-                              "type": "keyword"
-                            },
-                            "byod_tag": {
-                                "type": "keyword"
-                            },
-                            "modified_at": {
-                              "type": "date",
-                              "format": "epoch_millis"
+                            "properties": {
+                                "assembly_request_id": {
+                                    "type": "keyword"
+                                },
+                                "byod_tag": {
+                                    "type": "text",
+                                    "fields": {
+                                      "raw": {
+                                        "type": "keyword"
+                                      }
+                                    }
+                                },
+                                "modified_at": {
+                                    "type": "date",
+                                    "format": "epoch_millis"
+                                }
                             }
-                          }
                         }
                     }
                 }

@@ -1,5 +1,5 @@
 {
-    "dynamic": "strict",
+    "dynamic": "false",
     "properties": {
         "id": {
             "type": "keyword"
@@ -69,6 +69,36 @@
         },
         "data_paths": {
             "type": "keyword"
+        },
+        "pre_gen_output_paths": {
+            "properties": {
+                "file": {
+                    "type": "keyword"
+                },
+                "type": {
+                    "type": "keyword"
+                },
+                "timestamp": {
+                    "format": "epoch_millis",
+                    "type": "date"
+                },
+                "target": {
+                    "type": "keyword"
+                },
+                "description": {
+                    "type": "text"
+                },
+                "coords": {
+                    "properties": {
+                        "lat":{
+                            "type": "float"
+                        },
+                        "long":{
+                            "type": "float"
+                        }
+                    }
+                }
+            }
         },
         "observed_data": {
             "type": "keyword"
@@ -232,6 +262,9 @@
                 "choices": {
                     "type": "keyword"
                 },
+                "choices_labels": {
+                    "type": "keyword"
+                },
                 "min": {
                     "type": "float"
                 },
@@ -319,6 +352,9 @@
                 "choices": {
                     "type": "keyword"
                 },
+                "choices_labels": {
+                    "type": "keyword"
+                },
                 "min": {
                     "type": "float"
                 },
@@ -364,6 +400,9 @@
                 },
                 "unit_description": {
                     "type": "text"
+                },
+                "is_visible": {
+                    "type": "boolean"
                 },
                 "ontologies": {
                     "properties": {
