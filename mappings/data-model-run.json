@@ -4,6 +4,9 @@
         "id": {
             "type": "keyword"
         },
+        "name": {
+            "type": "keyword"
+        },
         "model_name": {
             "type": "keyword"
         },
