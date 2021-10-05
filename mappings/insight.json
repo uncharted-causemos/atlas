@@ -61,6 +61,12 @@
             "dynamic": "true",
             "enabled": false,
             "properties": {}
+        },
+        "annotation_state": {
+            "type": "object",
+            "dynamic": "true",
+            "enabled": false,
+            "properties": {}
         }
     }
 }
