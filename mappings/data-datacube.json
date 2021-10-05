@@ -79,8 +79,7 @@
                     "type": "keyword"
                 },
                 "timestamp": {
-                    "format": "epoch_millis",
-                    "type": "date"
+                    "type": "long"
                 },
                 "target": {
                     "type": "keyword"
@@ -162,12 +161,10 @@
         "period": {
             "properties": {
                 "gte": {
-                    "format": "epoch_millis",
-                    "type": "date"
+                    "type": "long"
                 },
                 "lte": {
-                    "format": "epoch_millis",
-                    "type": "date"
+                    "type": "long"
                 }
             }
         },

@@ -31,6 +31,18 @@
                         }
                     }
                 },
+                "queued": {
+                    "properties": {
+                        "start": {
+                            "format": "epoch_millis",
+                            "type": "date"
+                        },
+                        "end": {
+                            "format": "epoch_millis",
+                            "type": "date"
+                        }
+                    }
+                },
                 "post_processing": {
                     "properties": {
                         "start": {
@@ -63,8 +75,7 @@
                     "type": "keyword"
                 },
                 "timestamp": {
-                    "format": "epoch_millis",
-                    "type": "date"
+                    "type": "long"
                 },
                 "target": {
                     "type": "keyword"
