@@ -25,6 +25,25 @@
         },
         "type": {
             "type": "keyword"
+        },
+        "website": {
+            "type": "keyword"
+        },
+        "maintainer": {
+            "properties": {
+                "name": {
+                    "type": "keyword"
+                },
+                 "organization": {
+                    "type": "keyword"
+                },
+                 "email": {
+                    "type": "keyword"
+                },
+                 "website": {
+                    "type": "keyword"
+                }
+            }
         }
     }
 }
