@@ -32,6 +32,9 @@
                 "type": "keyword"
               }
             }
+        },
+        "level": {
+          "type": "keyword"
         }
     }
 }
