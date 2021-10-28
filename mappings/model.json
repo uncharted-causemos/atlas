@@ -19,6 +19,9 @@
         "is_stale": {
           "type": "boolean"
         },
+        "is_synced": {
+          "type": "boolean"
+        },
         "is_quantified": {
           "type": "boolean"
         },
