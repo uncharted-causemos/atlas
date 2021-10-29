@@ -70,7 +70,7 @@
             }
         },
         "time_scale": {
-          "type": "keyord"
+          "type": "keyword"
         }
     }
 }
