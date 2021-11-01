@@ -20,13 +20,18 @@
           "type": "boolean"
         },
         "is_synced": {
-            "type": "boolean"
+          "type": "boolean"
         },
         "is_quantified": {
           "type": "boolean"
         },
         "is_ambiguous": {
           "type": "boolean"
+        },
+        "engine_status": {
+           "type": "object",
+           "dynamic": "true",
+           "properties": {}
         },
         "status": {
           "type": "integer"
@@ -63,6 +68,9 @@
                     }
                 }
             }
+        },
+        "time_scale": {
+          "type": "keyword"
         }
     }
 }

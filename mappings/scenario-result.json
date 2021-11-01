@@ -1,0 +1,40 @@
+{
+    "dynamic": "strict",
+    "properties": {
+        "engine": {
+            "typ": "keyword"
+        },
+        "experiment_id": {
+            "type": "keyword"
+        },
+        "id": {
+            "type": "keyword"
+        },
+        "is_valid": {
+            "type": "boolean"
+        },
+        "model_id": {
+            "type": "keyword"
+        },
+        "result": {
+            "properties": {
+                "concept": {
+                    "type": "keyword"
+                },
+                "timeseries": {
+                    "properties": {
+                        "timestamp": {
+                            "type": "long"
+                        },
+                        "values": {
+                            "type": "float"
+                        }
+                    }
+                }
+            }
+        },
+        "scenario_id": {
+            "type": "keyword"
+        }
+    }
+}
