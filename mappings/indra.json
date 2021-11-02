@@ -12,7 +12,7 @@
             "format": "epoch_millis"
         },
         "matches_hash": {
-            "type": "long"
+            "type": "keyword"
         },
         "wm": {
             "properties": {
