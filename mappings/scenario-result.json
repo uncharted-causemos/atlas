@@ -2,7 +2,7 @@
     "dynamic": "strict",
     "properties": {
         "engine": {
-            "typ": "keyword"
+            "type": "keyword"
         },
         "experiment_id": {
             "type": "keyword"
