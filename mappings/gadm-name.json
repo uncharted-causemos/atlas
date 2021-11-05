@@ -35,6 +35,12 @@
         },
         "level": {
           "type": "keyword"
+        },
+        "bbox": {
+          "type": "float"
+        },
+        "code": {
+          "type": "keyword"
         }
     }
 }
