@@ -37,7 +37,7 @@
           "type": "keyword"
         },
         "bbox": {
-          "type": "float"
+          "type": "geo_shape"
         },
         "code": {
           "type": "keyword"
