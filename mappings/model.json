@@ -48,6 +48,9 @@
                 "engine": {
                     "type": "keyword"
                 },
+                "time_scale": {
+                  "type": "keyword"
+                },
                 "num_steps": {
                     "type": "integer"
                 },
@@ -68,9 +71,6 @@
                     }
                 }
             }
-        },
-        "time_scale": {
-          "type": "keyword"
         }
     }
 }

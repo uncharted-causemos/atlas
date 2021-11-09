@@ -21,7 +21,7 @@
                 "concept": {
                     "type": "keyword"
                 },
-                "timeseries": {
+                "values": {
                     "properties": {
                         "timestamp": {
                             "type": "long"
