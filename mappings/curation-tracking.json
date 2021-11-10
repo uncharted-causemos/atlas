@@ -1,0 +1,13 @@
+{
+    "properties": {
+        "id": {
+            "type": "keyword"
+        },
+        "tracking_data": {
+            "dynamic": "true",
+            "type": "object",
+            "enabled": false,
+            "properties": {}
+        }
+    }
+}
