@@ -35,6 +35,12 @@
         },
         "level": {
           "type": "keyword"
+        },
+        "bbox": {
+          "type": "geo_shape"
+        },
+        "code": {
+          "type": "keyword"
         }
     }
 }
