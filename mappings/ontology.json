@@ -11,7 +11,13 @@
             "type": "keyword"
         },
         "label": {
-            "type": "keyword"
+            "type": "text",
+            "analyzer": "concept-text",
+            "fields": {
+              "raw": {
+                "type": "keyword"
+              }
+            }
         },
         "project_id": {
             "type": "keyword"
