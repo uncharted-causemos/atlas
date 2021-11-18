@@ -115,12 +115,44 @@
             "type": "keyword"
         },
         "output_agg_values": {
+            "enabled": "false",
+            "type": "object",
             "properties": {
                 "name": {
                     "type": "keyword"
+                }
+            }
+        },
+        "data_info": {
+            "properties": {
+                "num_rows": {
+                    "type": "long"
                 },
-                "value": {
-                    "type": "float"
+                "region_levels": {
+                    "type": "keyword"
+                },
+                "features": {
+                    "type": "keyword"
+                },
+                "has_raw_data": {
+                    "type": "boolean"
+                },
+                "has_tiles": {
+                    "type": "boolean"
+                },
+                "has_monthly": {
+                    "type": "boolean"
+                },
+                "has_annual": {
+                    "type": "boolean"
+                },
+                "month_timeseries_size": {
+                    "enabled": "false",
+                    "type": "object"
+                },
+                "year_timeseries_size": {
+                    "enabled": "false",
+                    "type": "object"
                 }
             }
         }
