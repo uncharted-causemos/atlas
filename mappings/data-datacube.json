@@ -446,6 +446,9 @@
         "status": {
             "type": "keyword"
         },
+        "new_version_data_id": {
+            "type": "keyword"
+        },
         "runtimes": {
             "properties": {
                 "execution": {
