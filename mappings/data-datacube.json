@@ -67,6 +67,9 @@
                 }
             }
         },
+        "flow_id": {
+            "type": "keyword"
+        },
         "data_paths": {
             "type": "keyword"
         },
