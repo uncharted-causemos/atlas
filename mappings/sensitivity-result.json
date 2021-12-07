@@ -1,0 +1,25 @@
+{
+  "dynamic": "strict",
+  "properties": {
+    "experiment_id": {
+      "type": "keyword"
+    },
+    "id": {
+      "type": "keyword"
+    },
+    "model_id": {
+      "type": "keyword"
+    },
+    "result": {
+      "type": "object",
+      "dynamic": "true",
+      "enabled": false,
+      "properties": {
+      }
+    },
+    "scenario_id": {
+      "type": "keyword"
+    }
+  }
+}
+
