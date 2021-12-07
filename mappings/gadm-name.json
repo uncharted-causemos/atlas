@@ -36,6 +36,9 @@
         "level": {
           "type": "keyword"
         },
+        "full_path": {
+          "type": "keyword"
+        },
         "bbox": {
           "type": "geo_shape"
         },
