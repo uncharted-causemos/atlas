@@ -1,0 +1,31 @@
+{
+  "dynamic": "strict",
+  "properties": {
+    "engine": {
+      "type": "keyword"
+    },
+    "experiment_id": {
+      "type": "keyword"
+    },
+    "id": {
+      "type": "keyword"
+    },
+    "is_valid": {
+        "type": "boolean"
+    },
+    "model_id": {
+      "type": "keyword"
+    },
+    "result": {
+      "type": "object",
+      "dynamic": "true",
+      "enabled": false,
+      "properties": {
+      }
+    },
+    "scenario_id": {
+      "type": "keyword"
+    }
+  }
+}
+
