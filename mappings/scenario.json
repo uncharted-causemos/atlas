@@ -26,6 +26,10 @@
             "format": "epoch_millis",
             "type": "date"
         },
+        "created_at": {
+          "format": "epoch_millis",
+          "type": "date"
+      },
         "name": {
             "type": "keyword"
         },
