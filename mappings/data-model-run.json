@@ -143,8 +143,8 @@
                 "features": {
                     "type": "keyword"
                 },
-                "has_raw_data": {
-                    "type": "boolean"
+                "raw_count_threshold": {
+                    "type": "long"
                 },
                 "has_tiles": {
                     "type": "boolean"
@@ -160,6 +160,10 @@
                     "type": "object"
                 },
                 "year_timeseries_size": {
+                    "enabled": "false",
+                    "type": "object"
+                },
+                "num_rows_per_feature": {
                     "enabled": "false",
                     "type": "object"
                 }
