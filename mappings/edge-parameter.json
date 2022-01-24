@@ -32,6 +32,11 @@
             "properties": {
                 "weights": {
                     "type": "float"
+                },
+                "engine_weights": {
+                    "type": "object",
+                    "dynamic": "true",
+                    "properties": {}
                 }
             }
         },
