@@ -35,7 +35,7 @@
                 },
                 "engine_weights": {
                     "type": "object",
-                    "dynamic": "true",
+                    "enabled": "false",
                     "properties": {}
                 }
             }
