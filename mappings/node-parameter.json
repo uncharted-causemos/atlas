@@ -26,6 +26,11 @@
         "parameter": {
             "properties": {},
             "dynamic": "true"
+        },
+        "match_candidates": {
+            "type": "object",
+            "enabled": "false",
+            "properties": {}
         }
     }
 }
