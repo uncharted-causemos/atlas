@@ -24,6 +24,9 @@
         "kb_id": {
             "type": "keyword"
         },
+        "tenant_id": {
+            "type": "keyword"
+        },
         "modified_at": {
             "format": "epoch_millis",
             "type": "date"
