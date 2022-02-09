@@ -15,6 +15,9 @@
         "corpus_id": {
             "type": "keyword"
         },
+        "tenant_id": {
+            "type": "keyword"
+        },
         "corpus_index": {
             "type": "keyword"
         },
