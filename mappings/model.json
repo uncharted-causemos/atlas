@@ -37,7 +37,8 @@
           "type": "integer"
         },
         "created_at": {
-            "type": "date"
+            "type": "date",
+            "format": "epoch_millis"
         },
         "modified_at": {
             "type": "date",
@@ -57,6 +58,9 @@
                 "projection_start": {
                     "type": "date",
                     "format": "epoch_millis"
+                },
+                "history_range": {
+                  "type": "integer"
                 },
                 "indicator_time_series_range": {
                     "properties": {
