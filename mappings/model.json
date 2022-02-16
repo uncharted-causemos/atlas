@@ -40,8 +40,7 @@
           "type": "integer"
         },
         "created_at": {
-            "type": "date",
-            "format": "epoch_millis"
+            "type": "date"
         },
         "modified_at": {
             "type": "date",
