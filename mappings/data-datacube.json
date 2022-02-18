@@ -41,6 +41,20 @@
               }
             }
         },
+        "domains": {
+            "type": "text",
+            "fields": {
+              "raw": {
+                "type": "keyword"
+              }
+            }
+        },
+        "data_sensitivity": {
+            "type": "text"
+        },
+        "data_quality": {
+            "type": "text"
+        },
         "maintainer": {
             "properties": {
                 "name": {
@@ -442,6 +456,9 @@
                     "type": "keyword"
                 },
                 "roles": {
+                    "type": "keyword"
+                },
+                "qualifier_role": {
                     "type": "keyword"
                 }
             }
