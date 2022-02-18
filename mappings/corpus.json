@@ -87,6 +87,9 @@
         },
         "publisher_name": {
             "type": "keyword"
+        },
+        "genre": {
+            "type": "keyword"
         }
     }
 }

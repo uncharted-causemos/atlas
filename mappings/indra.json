@@ -390,6 +390,9 @@
                         "publisher_name": {
                             "type": "text"
                         },
+                        "genre": {
+                            "type": "keyword"
+                        },
                         "title": {
                             "type": "text"
                         },
