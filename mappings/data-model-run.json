@@ -21,11 +21,11 @@
             "properties": {
                 "execution": {
                     "properties": {
-                        "start": {
+                        "start_time": {
                             "format": "epoch_millis",
                             "type": "date"
                         },
-                        "end": {
+                        "end_time": {
                             "format": "epoch_millis",
                             "type": "date"
                         }
@@ -33,11 +33,11 @@
                 },
                 "queued": {
                     "properties": {
-                        "start": {
+                        "start_time": {
                             "format": "epoch_millis",
                             "type": "date"
                         },
-                        "end": {
+                        "end_time": {
                             "format": "epoch_millis",
                             "type": "date"
                         }
@@ -45,11 +45,11 @@
                 },
                 "post_processing": {
                     "properties": {
-                        "start": {
+                        "start_time": {
                             "format": "epoch_millis",
                             "type": "date"
                         },
-                        "end": {
+                        "end_time": {
                             "format": "epoch_millis",
                             "type": "date"
                         }

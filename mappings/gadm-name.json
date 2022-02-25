@@ -40,7 +40,8 @@
           "type": "keyword"
         },
         "bbox": {
-          "type": "geo_shape"
+          "type": "geo_shape",
+          "doc_values": true
         },
         "code": {
           "type": "keyword"
