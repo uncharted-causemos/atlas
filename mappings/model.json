@@ -54,6 +54,9 @@
                 "time_scale": {
                   "type": "keyword"
                 },
+                "geography": {
+                  "type": "keyword"
+                },
                 "num_steps": {
                     "type": "integer"
                 },
