@@ -49,6 +49,9 @@
               }
             }
         },
+        "sparkline": {
+            "type": "float"
+        },
         "data_sensitivity": {
             "type": "text"
         },
