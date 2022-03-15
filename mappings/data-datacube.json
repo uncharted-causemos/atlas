@@ -84,6 +84,9 @@
                 }
             }
         },
+        "is_hidden": {
+            "type": "boolean"
+        },
         "flow_id": {
             "type": "keyword"
         },
