@@ -46,6 +46,10 @@
         "analytical_question": {
             "type": "keyword"
         },
+        "image": {
+            "type": "object",
+            "enabled": false
+        },
         "thumbnail": {
             "type": "object",
             "enabled": false
