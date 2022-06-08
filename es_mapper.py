@@ -55,6 +55,9 @@ def create_index(client, index_name, index_mappings):
 
 if __name__ == "__main__":
     esURL = os.environ.get("ES")
+    esUsername = os.environ.get("ES_USERNAME")
+    esPassword = os.environ.get("ES_PASSWORD")
+
     mappings = [mapping.split("/")[-1] for mapping in scan_directory("./mappings")]
 
     if esURL == None:
@@ -71,7 +74,11 @@ if __name__ == "__main__":
                 exit(-1)
         mappings = indices
 
-    client = Elasticsearch([esURL])
+    client = None
+    if esUsername == None or esPassword == None:
+        client = Elasticsearch([esURL])
+    else:
+        client = Elasticsearch([esURL], http_auth=(esUsername, esPassword), verify_certs=False)
 
     for mapping_file in mappings:
         index_name = mapping_file.split(".")[0]
