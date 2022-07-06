@@ -10,12 +10,6 @@
         "state": {
             "type": "boolean"
         },
-        "root_source": {
-            "type": "keyword"
-        },
-        "root_target": {
-            "type": "keyword"
-        },
         "reference_ids": {
             "type": "keyword"
         },
