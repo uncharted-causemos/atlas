@@ -7,7 +7,7 @@
         "model_id": {
             "type": "keyword"
         },
-        "state": {
+        "is_custom": {
             "type": "boolean"
         },
         "reference_ids": {
