@@ -89,15 +89,3 @@ if __name__ == "__main__":
             content = json.loads(content)
             create_index(client, index_name, content)
 
-        # indra is a template index used to instantiate new indices, in order to clone the index we need
-        # to put it into a read-only state
-        if index_name == "indra":
-            logger.info("Setting indra to readonly")
-            body = {
-                "index": {
-                    "blocks.write": True,
-                    "blocks.read_only": True
-                }
-            }
-            client.indices.put_settings(body, index_name)
-

@@ -45,30 +45,16 @@ if __name__ == "__main__":
 
         logger.info(f"Deleting index {index_name}")
 
-        if index_name.startswith("indra"):
-            body = {
-                "index": {
-                    "blocks.write": False,
-                    "blocks.read_only": False 
-                }
-            }
-            client.indices.put_settings(body, index_name)
-
         client.indices.delete(index=index_name)
 
 
     if len(sys.argv) == 1:
         # Clean out dynamic, user created indices
-        indices = client.indices.get("*").keys()
+        indices = client.indices.get(index="*").keys()
+        print(indices)
         for index_name in indices:
+            print(index_name)
 
-            if index_name.startswith("indra") or index_name.startswith("project"):
+            if index_name.startswith("project"):
                 logger.info(f"Deleting index {index_name}")
-                body = {
-                    "index": {
-                        "blocks.write": False,
-                        "blocks.read_only": False 
-                    }
-                }
-                client.indices.put_settings(body, index_name)
                 client.indices.delete(index=index_name)

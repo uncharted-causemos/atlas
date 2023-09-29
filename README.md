@@ -1,6 +1,17 @@
 ### atlas
 atlas provides schemas and mappings for World Modelers
 
+#### Prerequisite
+
+Setup a virtual environment (optional but recommended)
+```
+python -m venv .venv
+source .venv/bin/activate
+```
+Install dependencies
+```
+pip install -r requirements.txt
+```
 
 #### Creating initial indices/mappings
 ```
@@ -21,5 +32,5 @@ Specifying no index names will create/clean all of the indices.
 #### Docker
 The Dockerfile will create a base ElasticSearch image with the index-mappings.
 ```
-docker build . -t <image_name>
+docker build -t <image_name> .
 ```
