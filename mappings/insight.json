@@ -71,6 +71,15 @@
             "dynamic": "true",
             "enabled": false,
             "properties": {}
+        },
+        "metadata": {
+            "type": "object",
+            "dynamic": "true",
+            "properties": {
+                "type": {
+                    "type": "keyword"
+                }
+            }
         }
     }
 }
