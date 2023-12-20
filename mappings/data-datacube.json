@@ -145,6 +145,11 @@
             "enabled": "false",
             "properties": {}
         },
+        "default_state": {
+            "type": "object",
+            "enabled": "false",
+            "dynamic": "true"
+        },
         "geography": {
             "properties": {
                 "country": {
