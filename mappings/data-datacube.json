@@ -147,7 +147,7 @@
         },
         "default_state": {
             "type": "object",
-            "enabled": "false",
+            "enabled": false,
             "dynamic": "true"
         },
         "geography": {
