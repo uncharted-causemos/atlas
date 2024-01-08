@@ -80,6 +80,22 @@
                     "type": "keyword"
                 }
             }
+        },
+        "schemaVersion": {
+            "type": "long"
+        },
+        "type": {
+            "type": "keyword"
+        },
+        "view": {
+            "type": "object",
+            "dynamic": "true",
+            "properties": {}
+        },
+        "state": {
+            "type": "object",
+            "dynamic": "true",
+            "properties": {}
         }
     }
 }
