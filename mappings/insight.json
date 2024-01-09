@@ -95,6 +95,7 @@
         "state": {
             "type": "object",
             "dynamic": "true",
+            "enabled": false,
             "properties": {}
         }
     }
